@@ -1,0 +1,147 @@
+body{
+    background: url(../img/bg.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+main{
+    border-top: 0.4px solid #FFF2E7;
+    padding: 5rem 5rem 0;
+    height: 90vh;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+main .sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+}
+main section h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 100;
+    color: #FFF2E7;
+}
+main section p{
+    margin: 2.5rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+main section a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #FFF2E7;
+    border: 0.5px solid #FFF2E7;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(5,5,5,0.4);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+main section a:hover{
+    background-color: #FFF2E7;
+    color: #000;
+}
+
+/*main section:last-child{
+    margin-top: 3rem;
+}*/
+
+main .top{
+    margin: auto 0;
+}
+
+main .bottom{
+    margin-top: auto;
+}
+
+main .bottom h2{
+    border-top: 0.4px solid #FFF2E7;
+    padding: 2rem 0 1rem;
+    font-size: 3rem;
+    font-weight: 400;
+}
+main .bottom p{
+    padding-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.main-products{
+    border-top: 0.4px solid #FFF2E7;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(60deg, #751614 ,#B5211F 70%) no-repeat
+}
+
+.main-products > h3{
+    text-align: center;
+    margin: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+}
+
+.main-products section{
+    display: flex;
+    height: 30.6%;
+    justify-content: space-between;
+}
+
+.main-products section:nth-child(2){
+    background: #BF7A80;
+}
+.main-products section img{
+    height: 100%;
+}
+
+.main-products section .sec-text,.sec-text2{
+    padding: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-products section:nth-child(3){
+    background: #BF84A5;
+}
+
+.main-products section:last-child{
+    background: #BF4E4E;
+}
+
+.main-products section button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 60%;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(5,5,5,0.4);
+    background-color: #D92D27;
+    color: #FFF2E7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.main-products section button:hover{
+    background-color: #E0591B;
+}
+
+
+@media (min-width: 1024px) {
+    
+    main section h1{
+        font-size: 10rem;
+    }
+    main section p{
+        font-size: 4rem;
+        font-weight: 100;
+        margin: 5rem;
+    }
+    main section button{
+        margin: 3rem;
+        width: 50%;
+    }
+}
