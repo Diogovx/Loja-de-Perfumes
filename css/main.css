@@ -44,10 +44,149 @@ header nav .nav-s > i{
     font-size: 2.2rem;
     cursor: pointer;
 }
-header nav .nav-s li{
+header .nav-g{
+    align-items: center;
+    justify-content: space-around;
+}
+header .searchBlock{
+    padding: 0.2rem;
+    width: 30%;
     display: none;
+    align-items: center;
+    background-color: #FFF2E7;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(20,20,20,0.5);
+}
+header .searchBlock input{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    border-radius: 3px;
+    background: transparent;
+    padding: 0.2rem 0.5rem;
+    color: #363331;
+    border: none;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+header .searchBlock i{
+    color: #363331;
+    margin-right: 0.7rem;
+    cursor: pointer;
 }
 
+.overlay{
+    position: fixed;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(20,20,20,0.5);
+    transition: 0.5s;
+}
+.sideNav{
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #474441;
+    padding-top: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.sideNav a{
+    color: #FFF2E7;
+}
+
+.sideNav > i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem 2.2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.sideNav > i:hover{
+    background-color: #CCC2BA;
+}
+.sideNav .searchBlock{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    position: relative;
+    background-color: #FFF2E7;
+    border-bottom: 0.4px solid #FFF2E7;
+}
+.sideNav .searchBlock input{
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: transparent;
+    color: #363331;
+}
+.sideNav .searchBlock i{
+    width: 10%;
+    color: #363331;
+    cursor: pointer;
+}
+
+
+.sideNav > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 0.4px solid #FFF2E7;
+    color: #FFF2E7;
+    transition: background-color 0.2s ease;
+}
+
+.sideNav a:hover{
+    background-color: #CCC2BA;
+}
+
+.sideNav .login{
+    padding: 3.5rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.5px solid #FFF2E7;
+}
+.sideNav .login h3{
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+.sideNav .login a{
+    padding: 1rem 4rem;
+    border: 0.4px solid #FFF2E7;
+    border-radius: 5px;
+}
+
+.sideNav .footerNav{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #363331;
+}
+.sideNav .footerNav a{
+    border-top: 0.5px solid #FFF2E7;
+    padding: 1rem;
+    transition: background-color 0.2s ease;
+}
+.sideNav .footerNav a:hover{
+    background: #CCC2BA;
+}
 
 footer{
     width: 100%;
@@ -86,6 +225,127 @@ footer li a:hover{
     background: #CCC2BA;
 }
 
+.overlayLogin{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(20,20,20,0.5);
+    transition: 0.5s;
+}
+
+.loginBlock{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #474441;
+    padding: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.loginBlock h3{
+    margin-bottom: 1.2rem;
+}
+
+.loginBlock .rowLogin{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
+.loginBlock .rowLogin .socialLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginBlock .rowLogin .socialLogin a{
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF2E7;
+    border: 0.5px solid #CCC2BA;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+.loginBlock .rowLogin .socialLogin a:hover{
+    background-color: #CCC2BA;
+}
+.loginBlock .rowLogin .socialLogin a i{
+    margin-right: 0.8rem;
+}
+.rowLogin form{
+    margin: 1rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rowLogin form input{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+    border: 0.4px solid #363331;
+}
+.rowLogin .passwordBlock{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    width: 100%;
+    justify-content: space-between;
+}
+.rowLogin .passwordBlock input{
+    margin: 0;
+    width: 90%;
+    color: #363331;
+}
+.rowLogin .passwordBlock i{
+    font-size: 1.8rem;
+}
+.rowLogin form button{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF2E7;
+    font-size: 1.7rem;
+    background-color: transparent;
+    border: 0.4px solid #CCC2BA;
+    border-radius: 2px;
+    padding: 0.8rem 0;
+    transition: background 0.2s ease;
+}
+.rowLogin form button:hover{
+    background-color: #CCC2BA;
+}
+.loginBlock a{
+    color: #FFF2E7;
+}
+.loginBlock > i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.loginBlock > i:hover{
+    background-color: #CCC2BA;
+}
+
+
+
 @media (max-width: 1023px){
     header nav .nav-g{
         display: none;
@@ -123,5 +383,8 @@ footer li a:hover{
     }
     header nav .nav-g li a:hover{
         border-bottom: 0.5px solid #FFF2E7;
+    }
+    header .searchBlock{
+        display: flex;
     }
 }

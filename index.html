@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,79 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/landing-page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/Conjunto1.svg" type="image/x-icon">
 
     <title>Perfumaria - Os melhores perfumes</title>
 </head>
+
 <body>
-    
+
     <header>
         <nav>
             <a href="index.html"><img src="img/Conjunto1.svg" alt="Logo"></a>
+            <div class="searchBlock">
+                <input type="text" placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="nav-g">
                 <li>
-                    <a href="products.html"><i class="fa-solid fa-bag-shopping"></i><p>Produtos</p></a>
+                    <a href="products.html"><i class="fa-solid fa-bag-shopping"></i>
+                        <p>Produtos</p>
+                    </a>
                 </li>
-                <button>Entrar</button>
+                <button id="openLogin" title="Fazer Login">Entrar</button>
 
             </div>
             <div class="nav-s">
                 <i class="fas fa-bars" id="barsIcon"></i>
-                <li>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i><p>Produtos</p></a>
-                    <button>Entrar</button>
-                    
-                </li>
-
             </div>
 
         </nav>
     </header>
-    
+
+    <div class="overlay" id="overlay">
+        <div class="sideNav">
+            <i class="fa-solid fa-close" id="closeIcon"></i>
+            <div class="login">
+                <h3>Faça login para uma melhor experiência!</h3>
+                <a href="#" id="openLogin2">Fazer login</a>
+            </div>
+            <div class="searchBlock">
+                <input type="text" placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="products.html"><i class="fa-solid fa-bag-shopping"></i>
+                <p>Produtos</p>
+            </a>
+            <a href=""><i class="fa-solid fa-tag"></i>
+                <p>Promoções</p>
+            </a>
+            <a href=""><i class="fa-solid fa-heart"></i>
+                <p>Dia dos namorados</p>
+            </a>
+            <a href=""><i class="fa-solid fa-gift"></i>
+                <p>Presentes</p>
+            </a>
+            <a href=""><i class="fa-solid fa-user"></i>
+                <p>Produtos corporais</p>
+            </a>
+
+            <div class="footerNav">
+                <a href="#">Sobre</a>
+                <a href="#">Suporte</a>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="sections">
             <div class="top">
                 <section>
-                    <h1>Perfumaria</h1>
-                    <p>Subitítulo</p>
+                    <h1>Le perfume</h1>
+                    <p>Arquétipos</p>
                     <a href="products.html">Explorar</a>
                 </section>
             </div>
@@ -60,7 +99,7 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-whatsapp"></i></a>
-            
+
         </div>
         <li>
             <a href="">Sobre</a>
@@ -69,5 +108,36 @@
         </li>
     </footer>
 
+    <div class="overlayLogin" id="overlayLogin">
+        <div class="loginBlock">
+            <i class="fa-solid fa-close" id="closeLogin"></i>
+            <h3>Faça login com suas redes sociais</h3>
+            <div class="rowLogin">
+                <div class="socialLogin">
+                    <a href="#" class="fb btn">
+                        <i class="fab fa-facebook"></i> Login com Facebook
+                       </a>
+                      <a href="#" class="google btn">
+                          <i class="fab fa-google"></i> Login com Google
+                      </a>
+                </div>
+                <small>Ou faça login manualmente</small>
+                <form action="">
+                    <input type="email" placeholder="E-mail">
+                    <div class="passwordBlock">
+                        <input type="password" placeholder="Senha" id="password">
+                        <i class="fa-solid fa-eye" id="passwordEye"></i>
+                    </div>
+                    <button>Fazer login</button>
+                </form>
+            </div>
+            <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,73 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/products-page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/Conjunto1.svg" type="image/x-icon">
 
     <title>Perfumaria - Produtos</title>
 </head>
+
 <body>
-    
+
     <header>
         <nav>
             <a href="index.html"><img src="img/Conjunto1.svg" alt="Logo"></a>
+            <div class="searchBlock">
+                <input type="text" placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="nav-g">
                 <li>
-                    <a href="#.html"><i class="fa-solid fa-bag-shopping"></i><p>Produtos</p></a>
+                    <a href="#.html"><i class="fa-solid fa-bag-shopping"></i>
+                        <p>Produtos</p>
+                    </a>
                 </li>
-                <button>Entrar</button>
+                <button id="openLogin" title="Fazer Login">Entrar</button>
 
             </div>
             <div class="nav-s">
                 <i class="fas fa-bars" id="barsIcon"></i>
-                <li>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i><p>Produtos</p></a>
-                    <button>Entrar</button>
-                </li>
-
             </div>
-            
+
         </nav>
     </header>
-    
+
+    <div class="overlay" id="overlay">
+        <div class="sideNav">
+            <i class="fa-solid fa-close" id="closeIcon"></i>
+            <div class="login">
+                <h3>Faça login para uma melhor experiência!</h3>
+                <a href="#" id="openLogin2">Fazer login</a>
+            </div>
+            <div class="searchBlock">
+                <input type="text" placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="products.html"><i class="fa-solid fa-bag-shopping"></i>
+                <p>Produtos</p>
+            </a>
+            <a href=""><i class="fa-solid fa-tag"></i>
+                <p>Promoções</p>
+            </a>
+            <a href=""><i class="fa-solid fa-heart"></i>
+                <p>Dia dos namorados</p>
+            </a>
+            <a href=""><i class="fa-solid fa-gift"></i>
+                <p>Presentes</p>
+            </a>
+            <a href=""><i class="fa-solid fa-user"></i>
+                <p>Produtos corporais</p>
+            </a>
+
+            <div class="footerNav">
+                <a href="#">Sobre</a>
+                <a href="#">Suporte</a>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="center">
             <div class="others">
@@ -53,24 +93,52 @@
             </div>
             <div class="spotlight">
                 <h3>Produtos destaques</h3>
+                <span>Arquétipos</span>
             </div>
+            
         </div>
     </main>
-    <section class="carrousel">
-        <img src="img/Metade.svg" alt="" height="200px">
-        <div class="sec-text">
-            <h3>Vênus</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-            <button>Ler mais</button>
+    <section class="carrousel" id="carrousel">
+
+        <div class="slide fade slide">
+            <img src="img/Metade.svg" alt="" height="200px">
+            <div class="sec-text">
+                <h3>Vênus</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                <button>Ler mais</button>
+            </div>
         </div>
-        <div class="sec-arrow">
+
+        <div class="slide fade slide2">
+            <div class="sec-text2">
+                <h3>Afrodite</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                <button>Ler mais</button>
+            </div>
+            <img src="img/Metade2.svg" alt="">
+        </div>
+
+        <div class="slide fade">
+            <img src="img/Metade3.svg" alt="">
+            <div class="sec-text">
+                <h3>Perséfone</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                <button>Ler mais</button>
+            </div>
+        </div>
+
+
+        <div class="sec-arrow arrowLeft" id="prev">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="sec-arrow arrowRight" id="next">
             <i class="fa-solid fa-angle-right"></i>
         </div>
     </section>
     <div class="circle-block">
-        <div class="active"></div>
-        <div></div>
-        <div></div>
+        <div class="dot" id="dot1" onclick="currentSlide(1)"></div>
+        <div class="dot" id="dot2" onclick="currentSlide(2)"></div>
+        <div class="dot" id="dot3" onclick="currentSlide(3)"></div>
     </div>
 
     <div class="prod-cards">
@@ -78,19 +146,16 @@
             <h3>Produtos</h3>
 
             <div class="cards">
-                <div class="sec-arrow left">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="card">
+                <div class="card" id="first">
                     <img src="img/perfume2-.svg" alt="">
                     <div class="star-block">
                         4<i class="fa-solid fa-star"></i>
                     </div>
-                    <h4>Perfume feminino Afrotite</h4>
+                    <h4>Perfume feminino Afrodite</h4>
                     <p>R$180,00</p>
                     <button>Comprar</button>
                 </div>
-                <div class="card">
+                <div class="card" id="second">
                     <img src="img/Perfume3.svg" alt="">
                     <div class="star-block">
                         4<i class="fa-solid fa-star"></i>
@@ -99,7 +164,7 @@
                     <p>R$180,00</p>
                     <button>Comprar</button>
                 </div>
-                <div class="card last">
+                <div class="card last" id="last">
                     <img src="img/Perfume1.svg" alt="">
                     <div class="star-block">
                         4<i class="fa-solid fa-star"></i>
@@ -108,35 +173,22 @@
                     <p>R$180,00</p>
                     <button>Comprar</button>
                 </div>
-                <div class="sec-arrow">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
             </div>
         </div>
     </div>
     <div class="circle-block c-bottom">
-        <div class="active"></div>
-        <div></div>
+        <div id="firstDot" ></div>
+        <div id="lastDot"></div>
     </div>
-    
+
     <!--<div class="main-products">
         <h3>Produtos</h3>
         <section>
-            <div class="sec-text2">
-                <h3>Afrodite</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                <button>Ler mais</button>
-            </div>
-            <img src="img/Metade2.svg" alt="">
+            
         </section>
             
         <section>
-            <img src="img/Metade3.svg" alt="">
-            <div class="sec-text">
-                <h3>Perséfone</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                <button>Ler mais</button>
-            </div>
+            
         </section>
     
     </div>-->
@@ -155,5 +207,37 @@
         </li>
     </footer>
 
+    <div class="overlayLogin" id="overlayLogin">
+        <div class="loginBlock">
+            <i class="fa-solid fa-close" id="closeLogin"></i>
+            <h3>Faça login com suas redes sociais</h3>
+            <div class="rowLogin">
+                <div class="socialLogin">
+                    <a href="#" class="fb btn">
+                        <i class="fab fa-facebook"></i> Login com Facebook
+                       </a>
+                      <a href="#" class="google btn">
+                          <i class="fab fa-google"></i> Login com Google
+                      </a>
+                </div>
+                <small>Ou faça login manualmente</small>
+                <form action="">
+                    <input type="email" placeholder="E-mail">
+                    <div class="passwordBlock">
+                        <input type="password" placeholder="Senha" id="password">
+                        <i class="fa-solid fa-eye" id="passwordEye"></i>
+                    </div>
+                    <button>Fazer login</button>
+                </form>
+            </div>
+            <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+
 </body>
+
 </html>

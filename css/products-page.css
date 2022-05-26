@@ -1,7 +1,12 @@
-body{
+body {
     background-color: #474441;
 }
-main{
+
+header .nav-g li a {
+    border-bottom: 0.5px solid #FFF2E7;
+}
+
+main {
     border-top: 0.4px solid #FFF2E7;
     padding: 5rem 5rem 0;
     height: auto;
@@ -9,49 +14,54 @@ main{
     text-align: center;
 }
 
-.center{
+.center {
     max-width: 1300px;
     margin: 0 auto;
 }
 
-main .others{
+main .others {
     margin-bottom: 5rem;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
-main .others a{
+main .others a {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     color: #FFF2E7;
 }
 
-main .others i{
+main .others i {
     padding: 2rem;
     border-radius: 50%;
     background-color: #FFF2E7;
-    box-shadow: 2px 2px 10px rgba(5,5,5,0.4);
+    box-shadow: 2px 2px 10px rgba(5, 5, 5, 0.4);
     color: #000;
     margin-bottom: 1rem;
     transition: background-color 0.2s ease;
 }
 
-main .others i:hover{
+main .others i:hover {
     background-color: #CCC2BA;
 }
 
-main .spotlight h3{
+main .spotlight h3 {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
+main .spotlight span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
 
-.main-products{
+.main-products {
     display: none;
 }
 
-.carrousel{
-    margin-top: 3rem;
+.carrousel {
+    margin-top: 1rem;
     background: #BF7A80;
     color: #FFF2E7;
     font-family: 'Montserrat', sans-serif;
@@ -60,47 +70,102 @@ main .spotlight h3{
     align-items: center;
     justify-content: center;
     gap: 4.5rem;
-    padding-right: 1rem;
+    position: relative;
 }
-.carrousel h3{
+
+.carrousel .slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    display: none;
+}
+
+.carrousel .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.carrousel img {
+    height: 30rem;
+}
+
+.carrousel .arrowLeft {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    display: none;
+    margin-left: 1rem;
+}
+
+.carrousel .arrowRight {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+}
+
+.carrousel .sec-text {
+    margin-right: 1.5rem;
+}
+
+
+
+.carrousel h3 {
     margin-bottom: 1rem;
     font-size: 2.2rem;
 }
-.carrousel p{
+
+.carrousel p {
     margin-bottom: 1rem;
 }
-.carrousel button{
+
+.carrousel button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     padding: 0.5rem;
     width: 50%;
     margin: 0 auto;
     border: none;
-    box-shadow: 2px 2px 10px rgba(5,5,5,0.4);
+    box-shadow: 2px 2px 10px rgba(5, 5, 5, 0.4);
     background-color: #FFF2E7;
     color: #000;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-.carrousel button:hover{
+
+.carrousel button:hover {
     background-color: #CCC2BA;
 }
 
-.carrousel .sec-arrow{
+.carrousel .sec-arrow {
     font-size: 2rem;
     margin-right: 1rem;
     cursor: pointer;
     height: 100%;
 }
 
-.circle-block{
+.circle-block {
     margin: 1rem 0 2rem;
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
-.circle-block div{
+
+.circle-block div {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -109,32 +174,35 @@ main .spotlight h3{
     transition: background-color 0.2s ease;
     cursor: pointer;
 }
-.circle-block div:hover{
-    background-color: #fff;
-}
-.circle-block .active{
+
+.circle-block div:hover {
     background-color: #fff;
 }
 
-.prod-cards{
+.circle-block .active {
+    background-color: #fff;
+}
+
+.prod-cards {
     margin-top: 4rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
 }
 
-.prod-cards h3{
+.prod-cards h3 {
     text-align: center;
 }
 
-.prod-cards .cards{
+.prod-cards .cards {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     margin: 3rem 1rem;
-    
+
 }
-.prod-cards .cards .card{
+
+.prod-cards .cards .card {
     background-color: #7A756F;
     border-radius: 4px;
     padding: 5rem 5rem 2.5rem;
@@ -142,64 +210,97 @@ main .spotlight h3{
     flex-direction: column;
     max-width: 50%;
     font-size: 1.4rem;
-    box-shadow: 2px 2px 10px rgba(5,5,5,0.4);
+    box-shadow: 2px 2px 10px rgba(5, 5, 5, 0.4);
 }
-.prod-cards .cards .card img{
+
+.prod-cards .cards .card img {
     height: 15rem;
 }
-.prod-cards .cards .card .star-block{
+
+.prod-cards .cards .card .star-block {
     margin: 1rem 0 1rem auto;
 }
 
-.prod-cards .cards .card p{
+.prod-cards .cards .card p {
     margin: 1rem 0;
 }
-.prod-cards .cards .card button{
+
+.prod-cards .cards .card button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     width: 100%;
     padding: 1rem;
     margin: 1rem auto;
     border: none;
-    box-shadow: 2px 2px 10px rgba(5,5,5,0.4);
+    box-shadow: 2px 2px 10px rgba(5, 5, 5, 0.4);
     background-color: #FFF2E7;
     color: #000;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-.prod-cards .cards .card button:hover{
+
+.prod-cards .cards .card button:hover {
     background-color: #CCC2BA;
 }
-.prod-cards .cards .last{
+
+.prod-cards .cards .last {
     display: none;
 }
-.prod-cards .cards .sec-arrow{
+#firstDot{
+    background-color: #fff;
+}
+
+.prod-cards .cards .sec-arrow {
     display: none;
 }
 
-@media (min-width: 1024px){
-    .prod-cards .cards .last{
+@media (min-width: 1024px) {
+    .prod-cards .cards .last {
         display: flex;
     }
-    .c-bottom{
+
+    .c-bottom {
         display: none;
     }
-    .carrousel{
-        justify-content: space-between;
+
+    .carrousel .slide {
+        justify-content: center;
     }
-    .carrousel img{
+
+    .carrousel .slide img {
+        margin-right: auto;
+    }
+
+    .carrousel .sec-text {
+        margin-right: auto;
+    }
+
+    .carrousel img {
         height: 35rem;
     }
-    .carrousel h3{
+
+    .carrousel h3 {
         font-size: 4rem;
     }
-    .carrousel p{
+
+    .carrousel p {
         font-size: 2rem;
         margin-bottom: 4rem;
     }
-    .carrousel button{
+
+    .carrousel button {
         padding: 1rem;
         font-size: 2rem;
+    }
+    .carrousel .slide2{
+        padding-left: 5rem;
+    }
+    .carrousel .slide2 img{
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .carrousel .sec-text2{
+        margin-left: auto;
     }
 }
